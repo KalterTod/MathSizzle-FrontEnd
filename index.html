@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="MathSizzle">
+	<head>
+  	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+  	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<title>Result</title>
+	</head>
+
+	<body>
+    <div class="top row" ng-app>
+
+      <div class="col-md-1"></div>
+
+      <div class="col-md-5">
+        <img class="logo" src="logo.jpg"></img>
+      </div>
+
+      <div id="cssmenu" class="col-md-6">
+        <ul ng-controller="navCtrl">
+           <li ng-class="{active: route.current.activeTab === 'home'}"><a href='#'><span>Home</span></a></li>
+           <li ng-class="{active: route.current.activeTab == 'lessons'}"><a href='#/lessons'><span>Lessons</span></a></li>
+           <li ng-class="{active: route.current.activeTab == 'problems'}"><a href='#/problems' ng-click="active='problems'"><span>Problems</span></a></li>
+           <li class="last" ng-class="{active: route.current.activeTab == 'about'}"><a href='#/about'><span>About</span></a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div ng-view></div>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
